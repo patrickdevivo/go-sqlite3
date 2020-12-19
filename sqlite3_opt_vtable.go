@@ -475,7 +475,7 @@ func goVBestIndex(pVTab unsafe.Pointer, icp unsafe.Pointer) *C.char {
 	idxStr := C.CString(res.IdxStr)
 	// defer C.free(unsafe.Pointer(idxStr))
 	info.idxStr = idxStr
-	info.needToFreeIdxStr = C.int(1)
+	info.needToFreeIdxStr = C.int(0)
 	if res.AlreadyOrdered {
 		info.orderByConsumed = C.int(1)
 	}
